@@ -1,0 +1,38 @@
+svsv@lx7-fuxi287:/home/local/svsv$ sudo docker run nginx
+^Csvsv@lx7-fuxi287:/home/local/svsv$ sudo docker run -d nginx
+d5a48bbf06c45a00380c9dfc5d3b9ce329db799d966b36c68f9c49eb2fa89d27
+svsv@lx7-fuxi287:/home/local/svsv$ sudo docker run -d nginx
+483b0ec1c1ed7be3a00b58e0963c38d8e0c4ae440ae0217c396f43d377e4fe5f
+svsv@lx7-fuxi287:/home/local/svsv$ sudo docker run -d nginx
+1918f978d77c6db2125de49bd9bec141276033313ecdf616652ec993689f607b
+svsv@lx7-fuxi287:/home/local/svsv$ sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                      PORTS               NAMES
+1918f978d77c        nginx               "nginx -g 'daemon of…"   9 seconds ago        Up 8 seconds                80/tcp              agitated_beaver
+483b0ec1c1ed        nginx               "nginx -g 'daemon of…"   13 seconds ago       Up 12 seconds               80/tcp              heuristic_visvesvaraya
+d5a48bbf06c4        nginx               "nginx -g 'daemon of…"   19 seconds ago       Up 18 seconds               80/tcp              amazing_proskuriakova
+adf8c0c708fc        nginx               "nginx -g 'daemon of…"   About a minute ago   Exited (0) 43 seconds ago                       sharp_yalow
+svsv@lx7-fuxi287:/home/local/svsv$ sudo docker rm ad
+ad
+svsv@lx7-fuxi287:/home/local/svsv$ sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+1918f978d77c        nginx               "nginx -g 'daemon of…"   39 seconds ago      Up 38 seconds       80/tcp              agitated_beaver
+483b0ec1c1ed        nginx               "nginx -g 'daemon of…"   43 seconds ago      Up 42 seconds       80/tcp              heuristic_visvesvaraya
+d5a48bbf06c4        nginx               "nginx -g 'daemon of…"   49 seconds ago      Up 48 seconds       80/tcp              amazing_proskuriakova
+
+svsv@lx7-fuxi287:/home/local/svsv$ sudo docker stop d5
+d5
+svsv@lx7-fuxi287:/home/local/svsv$ sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+1918f978d77c        nginx               "nginx -g 'daemon of…"   2 minutes ago       Up 2 minutes                80/tcp              agitated_beaver
+483b0ec1c1ed        nginx               "nginx -g 'daemon of…"   2 minutes ago       Up 2 minutes                80/tcp              heuristic_visvesvaraya
+d5a48bbf06c4        nginx               "nginx -g 'daemon of…"   2 minutes ago       Exited (0) 14 seconds ago                       amazing_proskuriakova
+
+svsv@lx7-fuxi287:/home/local/svsv$ sudo docker stop 48
+48
+svsv@lx7-fuxi287:/home/local/svsv$ sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+1918f978d77c        nginx               "nginx -g 'daemon of…"   2 minutes ago       Up 2 minutes                80/tcp              agitated_beaver
+483b0ec1c1ed        nginx               "nginx -g 'daemon of…"   2 minutes ago       Exited (0) 9 seconds ago                        heuristic_visvesvaraya
+d5a48bbf06c4        nginx               "nginx -g 'daemon of…"   3 minutes ago       Exited (0) 47 seconds ago                       amazing_proskuriakova
+svsv@lx7-fuxi287:/home/local/svsv$ 
+
